@@ -1,52 +1,42 @@
 :root {
-  --body-sans-font: Geist, sans-serif;
-  --body-preformatted-font: Iosevka Curly Iaso, monospace;
-  --body-title-font: Podkova, serif;
-
-  --background: #000000;
-  --text: #ff0000;
-  --text-selection: #ff0000;
-  --preformatted-background: #ff0000;
-  --link-foreground: #ff0000;
-  --link-background: #ff0000;
-  --blockquote-border-left: 1px solid #ff0000;
-
-  --progress-bar-outline: #ff0000 solid 4px;
-  --progress-bar-fill: #ff0000;
+  --body-sans-font:Aileron, sans-serif;
+  --body-preformatted-font:Aileron, monospace;
+  --body-title-font:GeistPixel, serif;
+  --background:#000;
+  --text:white;
+  --text-selection:#00afaf;
+  --preformatted-background:#00afaf;
+  --link-foreground:#00ffff;
+  --link-background:#0000;
+  --blockquote-border-left:1px solid #00afaf;
+  --progress-bar-outline:#00afaf solid 4px;
+  --progress-bar-fill:#00afaf
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #000000;
-    --text: #ff0000;
-    --text-selection: #ff0000;
-    --preformatted-background: #ff0000;
-    --link-foreground: #ff0000;
-    --link-background: #ff0000;
-    --blockquote-border-left: 1px solid #ff0000;
+    --background: #fff;
+    --text: #000;
+    --text-selection: #00afaf;
+    --preformatted-background: #00afaf;
+    --link-foreground: #3300ff;
+    --link-background: #0000;
+    --blockquote-border-left: 1px solid #00afaf;
   }
 }
 
 @font-face {
-  font-family: "Geist";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("./static/geist.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Podkova";
+  font-family: "GeistPixel";
   font-style: normal;
   font-weight: 400 800;
   font-display: swap;
-  src: url("./static/podkova.woff2") format("woff2");
+  src: url("./static/GeistPixel.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: "Iosevka Curly";
-  font-style: monospace;
+  font-family: "Aileron";
+  font-style: normal;
   font-display: swap;
-  src: url("./static/iosevka-curly.woff2") format("woff2");
+  src: url("./static/Aileron-Thin.otf") format("otf");
 }
 
 main {
