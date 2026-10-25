@@ -3,24 +3,24 @@
   --body-preformatted-font:Aileron, monospace;
   --body-title-font:GeistPixel, serif;
   --background:#000;
-  --text:white;
-  --text-selection:#00afaf;
-  --preformatted-background:#00afaf;
-  --link-foreground:#00ffff;
-  --link-background:#0000;
-  --blockquote-border-left:1px solid #00afaf;
-  --progress-bar-outline:#00afaf solid 4px;
-  --progress-bar-fill:#00afaf
+  --text:#c66b28;
+  --text-selection:#4c4f56;
+  --preformatted-background:#5effc9;
+  --link-foreground:#a277ff;
+  --link-background:#131520;
+  --blockquote-border-left:1px solid #5effc9;
+  --progress-bar-outline:#5effc9 solid 4px;
+  --progress-bar-fill:#5effc9;
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #fff;
-    --text: #000;
-    --text-selection: #00afaf;
-    --preformatted-background: #00afaf;
-    --link-foreground: #3300ff;
-    --link-background: #0000;
-    --blockquote-border-left: 1px solid #00afaf;
+    --background: #fafafa;
+    --text: #27243c;
+    --text-selection: #b5b7bd;
+    --preformatted-background: #2196f3;
+    --link-foreground: #2196f3;
+    --link-background: #b5b7bd;
+    --blockquote-border-left: 1px solid #2196f3;
   }
 }
 
@@ -29,14 +29,14 @@
   font-style: normal;
   font-weight: 400 800;
   font-display: swap;
-  src: url("./static/GeistPixel.ttf") format("ttf");
+  src: url("./static/GeistPixel.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Aileron";
   font-style: normal;
   font-display: swap;
-  src: url("./static/Aileron-Thin.otf") format("otf");
+  src: url("./static/Aileron.otf") format("opentype");
 }
 
 main {
