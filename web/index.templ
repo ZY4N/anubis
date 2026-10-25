@@ -48,11 +48,11 @@ templ base(title string, body templ.Component, impressum *config.Impressum, hone
             overflow: hidden;
             margin: 1rem 0 2rem;
             outline-offset: 2px;
-            outline: #b16286 solid 4px;
+            outline: #82e2ff solid 4px;
         }
 
         .bar-inner {
-            background-color: #b16286;
+            background-color: #82e2ff;
             height: 100%;
             width: 0;
             transition: width 0.25s ease-in;
@@ -75,7 +75,7 @@ templ base(title string, body templ.Component, impressum *config.Impressum, hone
 						<p>
 							{ localizer.T("protected_by") } <a href="https://github.com/TecharoHQ/anubis">Anubis</a> { localizer.T("protected_from") } <a
 	href="https://techaro.lol"
->Techaro</a>. { localizer.T("made_with") }.
+>Techaro</a>.
 						</p>
 						if impressum != nil {
 							<p>
