@@ -81,7 +81,7 @@ const t = (key: string): string =>
   translations[key] ||
   `unknown translatable string: ${key}`;
 
-interface OhNoesParams {
+interface setPromptParams {
   titleMsg: string;
   statusMsg: string;
   imageSrc: string;
@@ -127,7 +127,7 @@ interface OhNoesParams {
     });
   }
 
-  const ohNoes = ({ titleMsg, statusMsg, imageSrc }: OhNoesParams) => {
+  const setPrompt = ({ titleMsg, statusMsg, imageSrc }: setPromptParams) => {
     title.innerHTML = titleMsg;
     status.innerHTML = statusMsg;
     image.src = imageSrc;
@@ -138,7 +138,7 @@ interface OhNoesParams {
 
   for (const { value, name, msg } of dependencies) {
     if (!value) {
-      ohNoes({
+      setPrompt({
         titleMsg: `${t("missing_feature")} ${name}`,
         statusMsg: msg,
         imageSrc: imageURL("reject", anubisVersion, basePrefix),
@@ -151,7 +151,7 @@ interface OhNoesParams {
 
   const process = algorithms[rules.algorithm];
   if (!process) {
-    ohNoes({
+    setPrompt({
       titleMsg: t("challenge_error"),
       statusMsg: t("challenge_error_msg"),
       imageSrc: imageURL("reject", anubisVersion, basePrefix),
@@ -212,6 +212,18 @@ interface OhNoesParams {
     const t1 = Date.now();
     console.log({ hash, nonce });
 
+    setPrompt({
+      titleMsg: t("you_are_not_a_bot"),
+      statusMsg: t("you_are_not_a_bot"),
+      imageSrc: imageURL("happy", anubisVersion, basePrefix),
+    });
+
+    await new Promise<void>((resolve) => {
+      requestAnimationFrame(() => {
+        setTimeout(resolve, 200);
+      });
+    });
+
     await waitForExtensions();
 
     if (userReadDetails) {
@@ -226,10 +238,10 @@ interface OhNoesParams {
       container.style.height = "2rem";
       container.style.borderRadius = "1rem";
       container.style.cursor = "pointer";
-      container.style.background = "#b16286";
+      container.style.background = "#82e2ff";
       container.style.color = "white";
       container.style.fontWeight = "bold";
-      container.style.outline = "4px solid #b16286";
+      container.style.outline = "4px solid #82e2ff";
       container.style.outlineOffset = "2px";
       container.style.width = "min(20rem, 90%)";
       container.style.margin = "1rem auto 2rem";
@@ -263,7 +275,7 @@ interface OhNoesParams {
       );
     }
   } catch (err: any) {
-    ohNoes({
+    setPrompt({
       titleMsg: t("calculation_error"),
       statusMsg: `${t("calculation_error_msg")} ${err.message}`,
       imageSrc: imageURL("reject", anubisVersion, basePrefix),
