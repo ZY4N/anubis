@@ -238,10 +238,10 @@ interface setPromptParams {
       container.style.height = "2rem";
       container.style.borderRadius = "1rem";
       container.style.cursor = "pointer";
-      container.style.background = "#82e2ff";
+      container.style.background = "#f694ff";
       container.style.color = "white";
       container.style.fontWeight = "bold";
-      container.style.outline = "4px solid #82e2ff";
+      container.style.outline = "4px solid #f694ff";
       container.style.outlineOffset = "2px";
       container.style.width = "min(20rem, 90%)";
       container.style.margin = "1rem auto 2rem";
