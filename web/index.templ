@@ -73,9 +73,7 @@ templ base(title string, body templ.Component, impressum *config.Impressum, hone
 				<footer>
 					<div class="centered-div">
 						<p>
-							{ localizer.T("protected_by") } <a href="https://github.com/TecharoHQ/anubis">Anubis</a> { localizer.T("protected_from") } <a
-	href="https://techaro.lol"
->Techaro</a>.
+							{ localizer.T("protected_by") } <a href="https://github.com/TecharoHQ/anubis">Anubis</a> <code>{ anubis.Version }</code>.
 						</p>
 						if impressum != nil {
 							<p>
@@ -83,7 +81,6 @@ templ base(title string, body templ.Component, impressum *config.Impressum, hone
 								-- <a href={ templ.SafeURL(anubis.BasePrefix + fmt.Sprintf("%simprint", anubis.APIPrefix)) }>Imprint</a>
 							</p>
 						}
-						<p>{ localizer.T("version_info") } <code>{ anubis.Version }</code>.</p>
 					</div>
 				</footer>
 			</main>
