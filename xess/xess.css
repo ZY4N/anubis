@@ -127,7 +127,8 @@ h4,
 h5 {
   margin-bottom: 0.1rem;
   font-family: var(--body-title-font);
-  color:var(--title-text) 
+  color: var(--title-text);
+  font-size: 80px;
 }
 
 blockquote {
