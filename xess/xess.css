@@ -1,9 +1,10 @@
 :root {
   --body-sans-font:Aileron, sans-serif;
   --body-preformatted-font:Aileron, monospace;
-  --body-title-font:GeistPixel, serif;
-  --background:#000;
-  --text:#c66b28;
+  --body-title-font:VT323, serif;
+  --background:#0f111a;
+  --title-text:#c66b28;
+  --text:#5effc9;
   --text-selection:#4c4f56;
   --preformatted-background:#5effc9;
   --link-foreground:#a277ff;
@@ -25,11 +26,11 @@
 }
 
 @font-face {
-  font-family: "GeistPixel";
+  font-family: "VT323";
   font-style: normal;
   font-weight: 400 800;
   font-display: swap;
-  src: url("./static/GeistPixel.ttf") format("truetype");
+  src: url("./static/VT323.ttf") format("truetype");
 }
 
 @font-face {
@@ -126,6 +127,7 @@ h4,
 h5 {
   margin-bottom: 0.1rem;
   font-family: var(--body-title-font);
+  color:var(--title-text) 
 }
 
 blockquote {
