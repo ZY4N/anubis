@@ -28,7 +28,6 @@
 @font-face {
   font-family: "VT323";
   font-style: normal;
-  font-weight: 400 800;
   font-display: swap;
   src: url("./static/VT323.ttf") format("truetype");
 }
@@ -128,7 +127,7 @@ h5 {
   margin-bottom: 0.1rem;
   font-family: var(--body-title-font);
   color: var(--title-text);
-  font-size: 80px;
+  font-size: xx-large;
 }
 
 blockquote {
